@@ -1,12 +1,14 @@
 name: Ladestation prüfen
 
 on:
-  schedule:
-    - cron: "*/5 * * * *"   # alle 5 Minuten
-  workflow_dispatch:         # erlaubt manuelles Auslösen im GitHub-UI
+  workflow_dispatch:
+
+concurrency:
+  group: ladestation-check
+  cancel-in-progress: false
 
 permissions:
-  contents: write            # damit der Workflow state.json committen darf
+  contents: write
 
 jobs:
   check:
