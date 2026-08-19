@@ -19,7 +19,7 @@ SUBSCRIPTION_KEY = os.environ["ENBW_SUBSCRIPTION_KEY"]  # kommt aus GitHub Secre
 NTFY_TOPIC = os.environ["NTFY_TOPIC"]                    # kommt aus GitHub Secret
 STATE_FILE = "state.json"
 
-API_URL = f"https://enbw-emp.azure-api.net/emobility-public-api/api/v1/chargestations/{STATION_ID}"
+API_URL = f"https://api.emp.emob-enbw.com/emobility-public-api/api/v1/chargestations/{STATION_ID}"
 NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
 
 
